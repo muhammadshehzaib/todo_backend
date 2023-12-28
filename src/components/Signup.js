@@ -22,18 +22,18 @@ export default function Signup() {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
   const handleImageChange = async (e) => {
-    const file = e.target.files[0];
+    // const file = e.target.files[0];
 
     // Read the selected image file and set it in the state
     const reader = new FileReader();
     reader.onloadend = () => {
       setFormData({
         ...formData,
-        image: e.target.files[0],
-        imagePreview: URL.createObjectURL(file), // Use URL.createObjectURL to display image preview
+        // image: e.target.files[0],
+        // imagePreview: URL.createObjectURL(file), // Use URL.createObjectURL to display image preview
       });
     };
-    reader.readAsDataURL(file);
+    // reader.readAsDataURL(file);
   };
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -46,7 +46,7 @@ export default function Signup() {
         phoneNo: formData.phoneNo,
         email: formData.email,
         password: formData.password,
-        image: formData.image,
+        // image: formData.image,
       };
       const _formData = new FormData();
       Object.keys(forms).map((item) => {
@@ -58,6 +58,9 @@ export default function Signup() {
         {
           method: "POST",
           body: _formData,
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
       );
 
