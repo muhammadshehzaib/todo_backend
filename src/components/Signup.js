@@ -21,20 +21,20 @@ export default function Signup() {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-  const handleImageChange = async (e) => {
-    // const file = e.target.files[0];
+  // const handleImageChange = async (e) => {
+  //   // const file = e.target.files[0];
 
-    // Read the selected image file and set it in the state
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setFormData({
-        ...formData,
-        // image: e.target.files[0],
-        // imagePreview: URL.createObjectURL(file), // Use URL.createObjectURL to display image preview
-      });
-    };
-    // reader.readAsDataURL(file);
-  };
+  //   // Read the selected image file and set it in the state
+  //   const reader = new FileReader();
+  //   reader.onloadend = () => {
+  //     setFormData({
+  //       ...formData,
+  //       // image: e.target.files[0],
+  //       // imagePreview: URL.createObjectURL(file), // Use URL.createObjectURL to display image preview
+  //     });
+  //   };
+  //   // reader.readAsDataURL(file);
+  // };
   const handleSignup = async (e) => {
     e.preventDefault();
 
@@ -48,20 +48,20 @@ export default function Signup() {
         password: formData.password,
         // image: formData.image,
       };
-      const _formData = new FormData();
-      Object.keys(forms).map((item) => {
-        _formData.append(item, forms[item]);
-      });
-
+      // const _formData = new FormData();
+      // Object.keys(forms).map((item) => {
+      //   _formData.append(item, forms[item]);
+      // });
+      console.log(forms);
       const response = await fetch(
-        "https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/users",
+        "https://dictionary-application-with-image-uploader.vercel.app/users",
         {
           method: "POST",
-          body: _formData,
           headers: {
             "Content-Type": "application/json",
           },
-          mode: "no-cors",
+          body: JSON.stringify(forms),
+          // mode: "no-cors",
         }
       );
 
@@ -84,11 +84,7 @@ export default function Signup() {
     <div>
       <Navbar SignIn="SignIn" />
 
-      <form
-        className="max-w-[60%] mx-auto mt-10"
-        onSubmit={handleSignup}
-        encType="multipart/form-data"
-      >
+      <form className="max-w-[60%] mx-auto mt-10" onSubmit={handleSignup}>
         <div class="flex flex-col gap-5">
           <div className="flex gap-8">
             <div>

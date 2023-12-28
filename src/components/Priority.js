@@ -5,7 +5,7 @@ export default function Priority() {
 
   useEffect(() => {
     fetch(
-      "https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/get-all-notes"
+      "https://dictionary-application-with-image-uploader.vercel.app/get-all-notes"
     )
       .then((response) => {
         if (!response.ok) {
@@ -32,7 +32,7 @@ export default function Priority() {
     setSortedTasks(updatedTasks);
 
     fetch(
-      `https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/updatenotes/${selectedTaskId}`,
+      `https://dictionary-application-with-image-uploader.vercel.app/updatenotes/${selectedTaskId}`,
       {
         method: "PUT",
         headers: {

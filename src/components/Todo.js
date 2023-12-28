@@ -34,7 +34,7 @@ export default function Todo({
       setSortedTasks(updatedTasks);
 
       const response = await fetch(
-        `https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/updatenotes/${taskId}`,
+        `https://dictionary-application-with-image-uploader.vercel.app/updatenotes/${taskId}`,
         {
           method: "PUT",
           headers: {
@@ -63,7 +63,7 @@ export default function Todo({
       setSortedTasks(updatedTasks);
 
       const response = await fetch(
-        `https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/updatenotes/${taskId}`,
+        `https://dictionary-application-with-image-uploader.vercel.app/updatenotes/${taskId}`,
         {
           method: "PUT",
           headers: {

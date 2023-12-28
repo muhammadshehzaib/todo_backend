@@ -15,7 +15,7 @@ const Dashboard = () => {
         setIsLoading(true);
 
         const response = await fetch(
-          `https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/get-summary`,
+          `https://dictionary-application-with-image-uploader.vercel.app/get-summary`,
 
           {
             method: "GET",

@@ -18,13 +18,14 @@ export default function SignIn() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/users/login",
+        "https://dictionary-application-with-image-uploader.vercel.app/users/login",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(loginData),
+          // mode: "no-cors",
         }
       );
 

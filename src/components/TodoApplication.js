@@ -11,7 +11,7 @@ export default function TodoApplication() {
   async function handleAllTodo() {
     try {
       let res = await fetch(
-        "https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/get-all-notes",
+        "https://dictionary-application-with-image-uploader.vercel.app/get-all-notes",
         {
           method: "GET",
           headers: {
@@ -48,7 +48,7 @@ export default function TodoApplication() {
       Completed: false,
     };
     fetch(
-      "https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/create-notes",
+      "https://dictionary-application-with-image-uploader.vercel.app/create-notes",
       {
         method: "POST",
         headers: {
@@ -73,7 +73,7 @@ export default function TodoApplication() {
   async function handleCheckboxChange(todoId, newCompleted) {
     try {
       const res = await fetch(
-        `https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/updatenotes/${todoId}`,
+        `https://dictionary-application-with-image-uploader.vercel.app/updatenotes/${todoId}`,
         {
           method: "PUT",
           headers: {
@@ -96,7 +96,7 @@ export default function TodoApplication() {
   async function handleupdateTodos(todoId) {
     try {
       let fetchRes = await fetch(
-        `https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/notes/${todoId}`
+        `https://dictionary-application-with-image-uploader.vercel.app/notes/${todoId}`
       );
       const currentData = await fetchRes.json();
 
@@ -114,7 +114,7 @@ export default function TodoApplication() {
         Priority: currentData.Priority,
       };
       let updateRes = await fetch(
-        `https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/updatenotes/${todoId}`,
+        `https://dictionary-application-with-image-uploader.vercel.app/updatenotes/${todoId}`,
         {
           method: "PUT",
           headers: {
@@ -136,7 +136,7 @@ export default function TodoApplication() {
   async function handleDeleteTodos(id) {
     try {
       let res = await fetch(
-        "https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/deletenotes",
+        "https://dictionary-application-with-image-uploader.vercel.app/deletenotes",
         {
           method: "DELETE",
           headers: {
@@ -161,7 +161,7 @@ export default function TodoApplication() {
     }
     const todoIdsToDelete = completedTodos.map((todo) => todo.id);
     fetch(
-      "https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/clear-complete",
+      "https://dictionary-application-with-image-uploader.vercel.app/clear-complete",
       {
         method: "DELETE",
         headers: {
@@ -185,7 +185,7 @@ export default function TodoApplication() {
   async function deleteAllTodos() {
     try {
       const res = await fetch(
-        "https://dictionary-application-with-image-uploader-axw8u8mmp.vercel.app/delete-all-notes",
+        "https://dictionary-application-with-image-uploader.vercel.app/delete-all-notes",
         {
           method: "DELETE",
           headers: {
