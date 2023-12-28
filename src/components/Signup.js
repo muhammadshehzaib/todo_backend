@@ -61,6 +61,7 @@ export default function Signup() {
           headers: {
             "Content-Type": "application/json",
           },
+          mode: "no-cors",
         }
       );
 
