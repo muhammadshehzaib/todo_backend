@@ -21,7 +21,7 @@ export default function TodoApplication() {
       );
       const data = await res.json();
       setTodo(data.data);
-      console.log(data.data);
+      // console.log(data.data);
     } catch (error) {
       console.log();
     }

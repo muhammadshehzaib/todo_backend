@@ -36,8 +36,6 @@ export default function SignIn() {
       }
 
       const responseData = await response.json();
-      console.log("SignIn Successful:", responseData);
-      console.log(responseData.token);
 
       // Cookies.set("token", responseData.token);
       // console.log(Cookies.set("token", responseData.token));

@@ -52,7 +52,7 @@ export default function Signup() {
       // Object.keys(forms).map((item) => {
       //   _formData.append(item, forms[item]);
       // });
-      console.log(forms);
+      // console.log(forms);
       const response = await fetch(
         "https://dictionary-application-with-image-uploader.vercel.app/users",
         {
