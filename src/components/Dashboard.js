@@ -35,7 +35,7 @@ const Dashboard = () => {
   }, []);
   return (
     <div className="min-h-screen text-slate-900 dark:bg-slate-900 dark:text-slate-200 w-full max-h-max h-full">
-      <Navbar Home="Home" SignIn="SignIn" Logout="Logout" />
+      <Navbar SignIn="SignIn" Logout="Logout" />
 
       <div className="container mx-auto mt-8 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
         <h2 className="text-3xl font-semibold mb-4">Welcome, !</h2>
