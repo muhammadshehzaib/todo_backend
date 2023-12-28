@@ -197,13 +197,13 @@ export default function Signup() {
           />
         </div>
         <div className="mb-6">
-          <label
+          {/* <label
             htmlFor="image"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
           >
             Image
-          </label>
-          <input
+          </label> */}
+          {/* <input
             type="file"
             id="image"
             name="image"
@@ -211,16 +211,16 @@ export default function Signup() {
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[60%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
             onChange={handleImageChange}
-          />
+          /> */}
 
           {/* Display the image preview */}
-          {formData.imagePreview && (
+          {/* {formData.imagePreview && (
             <img
               src={formData.imagePreview}
               alt="Preview"
               className="mt-2 max-h-40"
             />
-          )}
+          )} */}
         </div>
         <div class="flex items-start mb-6">
           <div class="flex items-center h-5">
